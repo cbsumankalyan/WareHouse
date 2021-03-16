@@ -210,7 +210,7 @@ public class KycPOM extends SuperTestNG {
 		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yy");
 
 		Assert.assertEquals(UpdatedDate.getText(), formatter.format(date));
-		Assert.assertEquals(ModifiedBy.getText(), "portaladmin"); 
+		Assert.assertEquals(ModifiedBy.getText(), "Super Admin"); 
 
 		View.click();
 
@@ -226,7 +226,7 @@ public class KycPOM extends SuperTestNG {
 		test.log(Status.INFO, ModifyEmail.getAttribute("placeholder"));
 		Assert.assertEquals(ViewID.getAttribute("placeholder"), "108639101");
 		Assert.assertEquals(ViewName.getAttribute("placeholder"), "India Training");
-		Assert.assertEquals(Modify.getAttribute("placeholder"), "portaladmin");
+		Assert.assertEquals(Modify.getAttribute("placeholder"), "Super Admin");
 		Assert.assertEquals(ModifyName.getAttribute("placeholder"), "India Training");
 		Assert.assertEquals(ModifyID.getAttribute("placeholder"), "108639101");
 		Assert.assertEquals(ModifyEmail.getAttribute("placeholder"), "cbsumankalyan@gmail.com");
