@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 14 16:38:40 IST 2019</td>
+<td>Started on:</td><td>Tue Mar 16 11:31:41 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14767 ms)</td>
+<tr><td>Total time:</td><td>333 seconds (333451 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,20 +75,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Tests.sample2.PC()'><b>PC</b><br>Test class: Tests.sample2</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;Unicity[]&gt; but was:&lt;Unicity[ Warehouse Application]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at Tests.sample2.PC(sample2.java:14)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2107543287", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2107543287'><pre>org.junit.ComparisonFailure: expected:&lt;Unicity[]&gt; but was:&lt;Unicity[ Warehouse Application]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at Tests.sample2.PC(sample2.java:14)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+<td title='Tests.UPPDistributors.UPPDistributor()'><b>UPPDistributor</b><br>Test class: Tests.UPPDistributors</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...&gt; but was:&lt;Super ...&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at POM.UPPDistributorsPOM.Distributors(UPPDistributorsPOM.java:150)
+	at Pages.UPPDistributorsPage.Distributors(UPPDistributorsPage.java:10)
+	at Tests.UPPDistributors.UPPDistributor(UPPDistributors.java:23)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace925024581", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace925024581'><pre>junit.framework.ComparisonFailure: expected:&lt;...&gt; but was:&lt;Super ...&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at POM.UPPDistributorsPOM.Distributors(UPPDistributorsPOM.java:150)
+	at Pages.UPPDistributorsPage.Distributors(UPPDistributorsPage.java:10)
+	at Tests.UPPDistributors.UPPDistributor(UPPDistributors.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
@@ -111,8 +115,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>Tests.sample2@4e1d422d</td></tr>
+<td>11</td>
+<td>Tests.UPPDistributors@792b749c</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -122,10 +126,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Tests.sample1.FR()'><b>FR</b><br>Test class: Tests.sample1</td>
+<td title='Tests.Orders.CreateOrder()'><b>CreateOrder</b><br>Test class: Tests.Orders</td>
 <td></td>
-<td>0</td>
-<td>Tests.sample1@3327bd23</td></tr>
+<td>44</td>
+<td>Tests.Orders@43df23d3</td></tr>
+<tr>
+<td title='Tests.UPPPayments.KotakAvenueAborted()'><b>KotakAvenueAborted</b><br>Test class: Tests.UPPPayments</td>
+<td></td>
+<td>26</td>
+<td>Tests.UPPPayments@23e84203</td></tr>
+<tr>
+<td title='Tests.UPPPayments.KotakAvenueFailure()'><b>KotakAvenueFailure</b><br>Test class: Tests.UPPPayments</td>
+<td></td>
+<td>42</td>
+<td>Tests.UPPPayments@23e84203</td></tr>
+<tr>
+<td title='Tests.UPPPayments.KotakAvenueSucess()'><b>KotakAvenueSucess</b><br>Test class: Tests.UPPPayments</td>
+<td></td>
+<td>39</td>
+<td>Tests.UPPPayments@23e84203</td></tr>
+<tr>
+<td title='Tests.UPPPayments.RazorPay()'><b>RazorPay</b><br>Test class: Tests.UPPPayments</td>
+<td></td>
+<td>27</td>
+<td>Tests.UPPPayments@23e84203</td></tr>
+<tr>
+<td title='Tests.SMSTemplates.Template()'><b>Template</b><br>Test class: Tests.SMSTemplates</td>
+<td></td>
+<td>9</td>
+<td>Tests.SMSTemplates@6d60fe40</td></tr>
+<tr>
+<td title='Tests.Orders.WareHouseOrders()'><b>WareHouseOrders</b><br>Test class: Tests.Orders</td>
+<td></td>
+<td>37</td>
+<td>Tests.Orders@43df23d3</td></tr>
 </table><p>
 </body>
 </html>

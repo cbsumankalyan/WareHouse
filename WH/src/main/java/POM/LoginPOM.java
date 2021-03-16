@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.relevantcodes.extentreports.LogStatus;
+import com.aventstack.extentreports.Status;
 
 import Pages.SuperTestNG;
 
@@ -29,7 +29,8 @@ public class LoginPOM extends SuperTestNG{
 		Password.sendKeys(password);
 		Login.click();
 		
-		test.log(LogStatus.INFO, "Login:", "Username: " + username);
-		test.log(LogStatus.INFO, "", "Password: " + password);
+		test.log(Status.INFO, "<b><font color=green>Login as Admin</font></b>");
+		test.log(Status.INFO, "Login:  "+"Username: " + username);
+		test.log(Status.INFO, "Password:  " + password);
 	}
 }

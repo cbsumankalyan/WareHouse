@@ -32,7 +32,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.collections.Lists;
-import com.relevantcodes.extentreports.LogStatus;
+import com.aventstack.extentreports.Status;
 import Pages.SuperTestNG;
 
 public class WHOrdersPOM extends SuperTestNG {
@@ -253,7 +253,7 @@ public class WHOrdersPOM extends SuperTestNG {
 	private WebElement ReceivedBy;
 
 	@FindBy(id = "status")
-	private WebElement Status;
+	private WebElement STATUS;
 
 	@FindBy(id = "ds_team_order_sent_to_wh_tat_days")
 	private WebElement WHTATDays;
@@ -273,36 +273,39 @@ public class WHOrdersPOM extends SuperTestNG {
 	}
 
 	public void SendSMS() throws InterruptedException {
+		
+		test.log(Status.INFO, "<b><font color=green>Send SMS</font></b>");
+		
 		SelectALL.click();
 		SendSMS.click();
-		test.log(LogStatus.INFO, "Send sms: ", "for Dist ID 108639101: ");
-		test.log(LogStatus.INFO, "", SMSOrderDetails.getText());
+		test.log(Status.INFO, "Send sms: "+ "for Dist ID 108639101: ");
+		test.log(Status.INFO, SMSOrderDetails.getText());
 
 		Assert.assertEquals(SMSOrderDetails.getText(), 
-				"Total orders selected: 1\nOrders already delivered: 0\nSMS sent successfully: 1\nSMS sent failed: 0");
+				"Total orders selected: 1\nOrders already delivered: 0\nSMS sent successfully: 0\nSMS sent failed: 1");
 		DialogClose.click();
 
 		Thread.sleep(5000);
 		DeleteALL.click();
 		Delete.click();
-		test.log(LogStatus.INFO, "", SuccessMSG.getText());
+		test.log(Status.INFO, SuccessMSG.getText());
 		Assert.assertEquals(SuccessMSG.getText(), "Selected orders deleted successfully");
 
 		ID.sendKeys("108639101");
 		Search.click();
 		Assert.assertEquals(NoRecordsFound.getText(), "No Records Found");
 
-		test.log(LogStatus.INFO, "Search", "for Dist ID 108639101: ");
-		test.log(LogStatus.INFO, "", NoRecordsFound.getText());
+		test.log(Status.INFO, "Search"+ "for Dist ID 108639101: ");
+		test.log(Status.INFO, NoRecordsFound.getText());
 	}
 
 	@SuppressWarnings("deprecation")
 	public void ImportOrder() throws InterruptedException, IOException, InvalidFormatException {
 
-		test.log(LogStatus.INFO, "WHorders:", "Import Orders");
+		test.log(Status.INFO, "<b><font color=green>Import Orders</font></b>");
 
 		Thread.sleep(5000);
-		String excelpath = "D:\\India\\WH\\drivers\\sample.xlsx";
+		String excelpath = System.getProperty("user.dir") + "/drivers/sample.xlsx";
 
 		Workbook workbook = WorkbookFactory.create(new File(excelpath));
 		Sheet sheet = workbook.getSheetAt(0);
@@ -410,17 +413,18 @@ public class WHOrdersPOM extends SuperTestNG {
 			String cellvalue = row.getCell(cell[i].getCol()).toString();
 			Key.add(cellvalue);
 		}
-		test.log(LogStatus.INFO, "", "Checking the Excel sheet format");
+		test.log(Status.INFO, "Checking the Excel sheet format");
 		Assert.assertEquals(Key, Value);
 
 		ImportOrder.click();
+		Thread.sleep(2000);
 		SelectDate.sendKeys("03/11/2019");
-		test.log(LogStatus.INFO, "", "Selected Dispatch Date : 03/11/2019" );
+		test.log(Status.INFO, "Selected Dispatch Date : 03/11/2019" );
 
 		fileupload.sendKeys(excelpath);
 		FileSubmit.click();
 
-		test.log(LogStatus.INFO, "", SuccessMSG.getText());
+		test.log(Status.INFO, SuccessMSG.getText());
 		Assert.assertEquals(SuccessMSG.getText(), "Excel file uploaded successfully. Total orders uploaded - " + dispatchDate + " | inserted orders - "+ dispatchDate +" | status delivered orders - 0");
 
 		List<List<String>> q = Lists.newArrayList();
@@ -442,10 +446,13 @@ public class WHOrdersPOM extends SuperTestNG {
 		Thread.sleep(5000);
 		Delete.click();
 		Assert.assertEquals(SuccessMSG.getText(), "Selected orders deleted successfully");
-		test.log(LogStatus.INFO, "Delete :", SuccessMSG.getText());
+		test.log(Status.INFO, "Delete :"+ SuccessMSG.getText());
 	}
 
 	public void CreateOrder() {
+		
+		test.log(Status.INFO, "<b><font color=407899>"+"Creating Order" + "</font></b>");
+		
 		CreateOrder.click();
 
 		Date date = new Date();
@@ -511,13 +518,13 @@ public class WHOrdersPOM extends SuperTestNG {
 		Save.click();
 		Assert.assertEquals(SuccessMSG.getText(), "Order created successfully");
 
-		test.log(LogStatus.INFO, "Create :", "Dist ID: 108639101, Order Number: 123456789 , InvoiceNumber: 12345");
-		test.log(LogStatus.INFO, "", SuccessMSG.getText());
+		test.log(Status.INFO, "Create :"+ "Dist ID: 108639101, Order Number: 123456789 , InvoiceNumber: 12345");
+		test.log(Status.INFO, SuccessMSG.getText());
 
 		ID.sendKeys("108639101");
 		Search.click();
 		Assert.assertEquals(CreatedOrder.getText(), "123456789 Testing 108639101 Bangalore Bangalore 1983.76 12345 DTDC SURFACE 0 " + formatter1.format(date) +" " + formatter1.format(date));
-		test.log(LogStatus.INFO, "", "Created Order should be as the 1st Record in the table");
+		test.log(Status.INFO, "Created Order should be as the 1st Record in the table");
 
 		CreateOrder.click();
 
@@ -592,7 +599,7 @@ public class WHOrdersPOM extends SuperTestNG {
 
 		Back.click();
 
-		test.log(LogStatus.INFO, "View ", "Checking the Order Details in view");
+		test.log(Status.INFO, "View "+ "Checking the Order Details in view");
 	}
 
 	public void EditOrder() {
@@ -627,8 +634,8 @@ public class WHOrdersPOM extends SuperTestNG {
 		Search.click();
 		
 		Assert.assertEquals(SearchedOrder.getText(), "98765432 Testing India 108639101 Bangalore South Guwahati 2000.75 82153 PROFESSIONAL SURFACE 0 " + formatter.format(date) +" " + formatter.format(date));
-		test.log(LogStatus.INFO, "Edit ", "Editing the Order");
-		test.log(LogStatus.INFO, " ", SuccessMSG.getText());
+		test.log(Status.INFO, "Edit "+ "Editing the Order");
+		test.log(Status.INFO,  SuccessMSG.getText());
 	}
 
 	public void SearchOrder(){
@@ -638,15 +645,15 @@ public class WHOrdersPOM extends SuperTestNG {
 
 		ID.sendKeys("108639101");
 		Search.click();
-		test.log(LogStatus.INFO, "Search :", "Distributor ID");
-		test.log(LogStatus.INFO, "", SearchedOrder.getText());
+		test.log(Status.INFO, "Search :"+ "Distributor ID");
+		test.log(Status.INFO, SearchedOrder.getText());
 		Assert.assertEquals(SearchedOrder.getText(), "123456789 Testing 108639101 Bangalore Bangalore 1983.76 12345 DTDC SURFACE 0 " + formatter.format(date) +" " + formatter.format(date));
 
 		ID.clear();
 		OrderNumber.sendKeys("887247623");
 		Search.click();
-		test.log(LogStatus.INFO, "Search :", "Order ID");
-		test.log(LogStatus.INFO, "", SearchedOrder.getText());
+		test.log(Status.INFO, "Search :"+ "Order ID");
+		test.log(Status.INFO, SearchedOrder.getText());
 		Assert.assertEquals(SearchedOrder.getText(), "887247623 Testing 108639101 Bangalore Guwahati 2000.75 12345 DTDC SURFACE 0 " + formatter.format(date) +" " + formatter.format(date));
 
 		OrderNumber.clear();
@@ -654,14 +661,14 @@ public class WHOrdersPOM extends SuperTestNG {
 		Select warehouse = new Select(WareHouse);
 		warehouse.selectByVisibleText("Guwahati");
 		Search.click();
-		test.log(LogStatus.INFO, "Search :", "Warehouse");
-		test.log(LogStatus.INFO, "", SearchedOrder.getText());
+		test.log(Status.INFO, "Search :"+ "Warehouse Guwahati");
+		test.log(Status.INFO, SearchedOrder.getText());
 		Assert.assertEquals(SearchedOrder.getText(), "887247623 Testing 108639101 Bangalore Guwahati 2000.75 12345 DTDC SURFACE 0 " + formatter.format(date) +" " + formatter.format(date));
 
 		warehouse.selectByVisibleText("Bangalore");
 		Search.click();
-		test.log(LogStatus.INFO, "Search :", "Warehouse");
-		test.log(LogStatus.INFO, "", SearchedOrder.getText());
+		test.log(Status.INFO, "Search :"+ "Warehouse Banglore");
+		test.log(Status.INFO, SearchedOrder.getText());
 		Assert.assertEquals(SearchedOrder.getText(), "123456789 Testing 108639101 Bangalore Bangalore 1983.76 12345 DTDC SURFACE 0 " + formatter.format(date) +" " + formatter.format(date));
 	}
 }

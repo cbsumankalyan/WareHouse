@@ -7,13 +7,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 import java.util.Random;
-
 import javax.mail.Folder;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Store;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,12 +20,12 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import com.aventstack.extentreports.Status;
 
-import com.relevantcodes.extentreports.LogStatus;
 
 import Pages.SuperTestNG;
 
-public class KycPOM extends SuperTestNG{
+public class KycPOM extends SuperTestNG {
 
 	@FindBy(xpath = "//a[contains(@href, '/kycpage')]")
 	private WebElement KycPage;
@@ -114,7 +112,7 @@ public class KycPOM extends SuperTestNG{
 	private WebElement ModifiedBy;
 
 	@FindBy(xpath = "//tr[1]//td[6]")
-	private WebElement Status;
+	private WebElement STATUS;
 
 	@FindBy(name = "kyc_dist_name")
 	private WebElement KycDistributorName;
@@ -157,45 +155,56 @@ public class KycPOM extends SuperTestNG{
 	}
 
 	public void Kyc() {
+		
+		test.log(Status.INFO, "<b><font color=407899>"+"Kyc Page:"+"Search Dist ID 108639101: " + "</font></b>");
+		
 		KycPage.click();
-		test.log(LogStatus.INFO, "Kyc Page:", "Search Dist ID 108639101: ");
+		test.log(Status.INFO, "Kyc Page:"+"Search Dist ID 108639101: ");
 		SerachDistID.sendKeys("108639101");
 		Search.click();
 		Assert.assertEquals(DistributorID.getText(), "108639101");
 		Assert.assertEquals(DistributorName.getText(), "India Training");
 
-		test.log(LogStatus.INFO, "", "Dist Name :" + DistributorName.getText());
+		test.log(Status.INFO,"Dist Name :" + DistributorName.getText());
 
 		KycPageUpload.click();
 		DistID.sendKeys("108639101");
 		DistEmail.sendKeys("cbsumankalyan@gmail.com");
 		KycDistID.sendKeys("108639101");
 		KycRemarks.sendKeys("Uploading KYC Documents Remarks");
-		test.log(LogStatus.INFO, "UploadKyc", "108639101");
-		test.log(LogStatus.INFO, "", "cbsumankalyan@gmail.com");
-		test.log(LogStatus.INFO, "", "Uploader Dist ID: 108639101");
-		test.log(LogStatus.INFO, "", "Uploading KYC Documents Remarks");
+		test.log(Status.INFO, "UploadKyc"+"108639101");
+		test.log(Status.INFO, "cbsumankalyan@gmail.com");
+		test.log(Status.INFO, "Uploader Dist ID: 108639101");
+		test.log(Status.INFO, "Uploading KYC Documents Remarks");
 	}
 
 	public void KycUpload() {
-		File1.sendKeys("D:\\India\\WH\\kyc\\aggrementfront.pdf");
-		File2.sendKeys("D:\\India\\WH\\kyc\\aggrementback.png");
-		File3.sendKeys("D:\\India\\WH\\kyc\\aggrementfront.pdf");
-		File4.sendKeys("D:\\India\\WH\\kyc\\addressback.png");
-		File5.sendKeys("D:\\India\\WH\\kyc\\pan.png");
-		File6.sendKeys("D:\\India\\WH\\kyc\\cheque.pdf");
+		
+		String filepath = System.getProperty("user.dir") + "/kyc/";
+		
+		test.log(Status.INFO, "<b><font color=407899>"+"Upload KYC" + "</font></b>");
+		
+		File1.sendKeys(filepath + "aggrementfront.pdf");
+		File2.sendKeys(filepath + "aggrementback.png");
+		File3.sendKeys(filepath + "aggrementfront.pdf");
+		File4.sendKeys(filepath + "addressback.png");
+		File5.sendKeys(filepath + "pan.png");
+		File6.sendKeys(filepath + "cheque.pdf");
 		Submit.click();
-		test.log(LogStatus.INFO, "", "Uploading KYC 6 Documents");
-		test.log(LogStatus.INFO, "", Kycuploadsuccessmsg.getText());
+		test.log(Status.INFO, "Uploading KYC 6 Documents");
+		test.log(Status.INFO, Kycuploadsuccessmsg.getText());
 		Assert.assertEquals(Kycuploadsuccessmsg.getText(), "Dear Unicity Distributor Your KYC documents has been successfully submitted.");
 	}
 
 	public void KycView() {
+		
+		test.log(Status.INFO, "<b><font color=407899>"+"KYC View" + "</font></b>");
+		
 		Assert.assertEquals(DistributorID.getText(), "108639101");
 		Assert.assertEquals(DistributorName.getText(), "India Training");
-		test.log(LogStatus.INFO, "", "After Uploading Docs the record should be in the 1st Queue ");
-		test.log(LogStatus.INFO, "", DistributorID.getText());
-		test.log(LogStatus.INFO, "", DistributorName.getText());
+		test.log(Status.INFO, "After Uploading Docs the record should be in the 1st Queue ");
+		test.log(Status.INFO, DistributorID.getText());
+		test.log(Status.INFO, DistributorName.getText());
 
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yy");
@@ -209,12 +218,12 @@ public class KycPOM extends SuperTestNG{
 
 			driver.switchTo().window(handle1);
 		}
-		test.log(LogStatus.INFO, "Kyc View:", ViewID.getAttribute("placeholder"));
-		test.log(LogStatus.INFO, "", ViewName.getAttribute("placeholder"));
-		test.log(LogStatus.INFO, "", Modify.getAttribute("placeholder"));
-		test.log(LogStatus.INFO, "", ModifyName.getAttribute("placeholder"));
-		test.log(LogStatus.INFO, "", ModifyID.getAttribute("placeholder"));
-		test.log(LogStatus.INFO, "", ModifyEmail.getAttribute("placeholder"));
+		test.log(Status.INFO, "Kyc View:"+ViewID.getAttribute("placeholder"));
+		test.log(Status.INFO, ViewName.getAttribute("placeholder"));
+		test.log(Status.INFO, Modify.getAttribute("placeholder"));
+		test.log(Status.INFO, ModifyName.getAttribute("placeholder"));
+		test.log(Status.INFO, ModifyID.getAttribute("placeholder"));
+		test.log(Status.INFO, ModifyEmail.getAttribute("placeholder"));
 		Assert.assertEquals(ViewID.getAttribute("placeholder"), "108639101");
 		Assert.assertEquals(ViewName.getAttribute("placeholder"), "India Training");
 		Assert.assertEquals(Modify.getAttribute("placeholder"), "portaladmin");
@@ -224,6 +233,8 @@ public class KycPOM extends SuperTestNG{
 	}
 
 	public void KycValidate() {
+		
+		test.log(Status.INFO, "<b><font color=407899>"+"KYC Validate" + "</font></b>");
 
 		Validate.click();
 
@@ -231,11 +242,11 @@ public class KycPOM extends SuperTestNG{
 
 			driver.switchTo().window(handle1);
 		}
-		test.log(LogStatus.INFO, "Kycvalidate", KycDistID.getAttribute("value"));
-		test.log(LogStatus.INFO, "", KycDistributorName.getAttribute("value"));
-		test.log(LogStatus.INFO, "", KycUploaderName.getAttribute("value"));
-		test.log(LogStatus.INFO, "", KycUploaderId.getAttribute("value"));
-		test.log(LogStatus.INFO, "", KycUploaderEmail.getAttribute("value"));
+		test.log(Status.INFO, "Kycvalidate"+KycDistID.getAttribute("value"));
+		test.log(Status.INFO, KycDistributorName.getAttribute("value"));
+		test.log(Status.INFO, KycUploaderName.getAttribute("value"));
+		test.log(Status.INFO, KycUploaderId.getAttribute("value"));
+		test.log(Status.INFO, KycUploaderEmail.getAttribute("value"));
 		Assert.assertEquals(KycDistID.getAttribute("value"), "108639101");
 		Assert.assertEquals(KycDistributorName.getAttribute("value"), "India Training");
 		Assert.assertEquals(KycUploaderName.getAttribute("value"), "India Training");
@@ -248,18 +259,20 @@ public class KycPOM extends SuperTestNG{
 		Select statustyps = new Select(CSStatus);
 		statustyps.selectByVisibleText(random);
 		Update.click();
-		Assert.assertEquals(Status.getText(), random);
-		test.log(LogStatus.INFO, "Kycstatus:" , Status.getText());
+		Assert.assertEquals(STATUS.getText(), random);
+		test.log(Status.INFO, "Kycstatus:"+STATUS.getText());
 	}
 
 	public void SendSMS() {
+		
+		test.log(Status.INFO, "<b><font color=407899>"+"KYC Send SMS" + "</font></b>");
 
 		SendSMS.click();
 		MobileNumber.sendKeys("9019185440");
 		KycDistID.sendKeys("108639101");
-		test.log(LogStatus.INFO, "Sendsms:" , "Distributor");
-		test.log(LogStatus.INFO, "" , "9019185440");
-		test.log(LogStatus.INFO, "" , "108639101");
+		test.log(Status.INFO, "Sendsms:"+"Distributor");
+		test.log(Status.INFO, "9019185440");
+		test.log(Status.INFO, "108639101");
 
 		for(int i = 0; i<SMSTemplates.size(); i++) {
 			SMSTemplates.get(i).click();
@@ -269,12 +282,15 @@ public class KycPOM extends SuperTestNG{
 		send.click();
 //		Assert.assertEquals(SMSSent.getText(), "✓ SMS Sent:- Active, Pan Card Pending, Distributor Agreement Form, Distributor Agreement Form first page pending, Distributor Agreement form second page pending, Address Proof Pending, Incorrect Enroller, Incorrect Sponsor, Bank Proof, No Attachments, Distributor Agreement 2nd Page Singnature missing, Incorrect Address proof, Received only Pan Ack, Distributor Agreement form not clear");
 		//		Assert.assertEquals(SMSFailed.getText(), "âœ˜ SMS Failed:- sample SMS(Code=0 Template Matching Failed)");
-		test.log(LogStatus.INFO, "" , SMSSent.getText());
+		test.log(Status.INFO, SMSSent.getText());
 		//		test.log(LogStatus.INFO, "" , SMSFailed.getText());
 	}
 
 	public static boolean verifyMail(String userName, String password, String message) {
-		test.log(LogStatus.INFO, "Email:" , "User has to receive Kyc Upload email notification");
+		
+		test.log(Status.INFO, "<b><font color=407899>"+"Upload KYC" + "</font></b>");
+		
+		test.log(Status.INFO, "Email:" + "User has to receive Kyc Upload email notification");
 		Folder folder = null;
 		Store store = null;
 		try {
@@ -314,8 +330,8 @@ public class KycPOM extends SuperTestNG{
 						"\r\n" + 
 						"\r\n" + 
 						"";
-				test.log(LogStatus.INFO, "" , strMailSubject);
-				test.log(LogStatus.INFO, "" , body);
+				test.log(Status.INFO, strMailSubject);
+				test.log(Status.INFO, body);
 
 				if (strMailSubject.equals(message)) {
 					Assert.assertEquals(strMailSubject, "KYC Documents Uploaded Succesfully");
@@ -346,5 +362,6 @@ public class KycPOM extends SuperTestNG{
 			}
 		}
 		return false;
-	}	
+	}
+	
 }

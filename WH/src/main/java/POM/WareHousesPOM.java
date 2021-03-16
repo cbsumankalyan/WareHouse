@@ -9,9 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
-import com.relevantcodes.extentreports.LogStatus;
-
+import com.aventstack.extentreports.Status;
 import Pages.SuperTestNG;
 
 public class WareHousesPOM extends SuperTestNG{
@@ -28,7 +26,7 @@ public class WareHousesPOM extends SuperTestNG{
 	
 	public void WareHousesList() {
 		WareHousesPage.click();
-		test.log(LogStatus.INFO, "Warehouses:" , "List of Warehouses");
+		test.log(Status.INFO, "Warehouses:"+"List of Warehouses");
 		List<String> WareHouse = new ArrayList<String>();
 //		ArrayList<String> WareHouse = new ArrayList<>();
 //		ArrayList<String> CheckWareHouse = new ArrayList<>(Arrays.asList(

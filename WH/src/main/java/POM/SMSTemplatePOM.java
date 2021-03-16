@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import com.aventstack.extentreports.Status;
 
-import com.relevantcodes.extentreports.LogStatus;
 
 import Pages.SuperTestNG;
 
@@ -54,18 +54,18 @@ public class SMSTemplatePOM extends SuperTestNG{
 		SMSTemplate.sendKeys("Create SMS Template");
 		Save.click();
 		Assert.assertTrue(CheckTemplate.isDisplayed());
-		test.log(LogStatus.INFO, "SMS", "SMS Templates");
-		test.log(LogStatus.INFO, "", "Template Created");
+		test.log(Status.INFO, "SMS"+"SMS Templates");
+		test.log(Status.INFO, "Template Created");
 		
 		UpdateTemplate.click();
 		SMSTitle.sendKeys(" Updated");
 		SMSTemplate.sendKeys(" Updated");
 		Save.click();
-		test.log(LogStatus.INFO, "", "Template Updated");
+		test.log(Status.INFO, "Template Updated");
 		
 		DeleteTemplate.click();
 		DeleteOK.click();
-		test.log(LogStatus.INFO, "", "Template Deleted");
+		test.log(Status.INFO, "Template Deleted");
 	}
 
 }
