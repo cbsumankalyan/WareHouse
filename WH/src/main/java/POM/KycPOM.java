@@ -144,7 +144,7 @@ public class KycPOM extends SuperTestNG {
 	@FindBy(id = "submit")
 	private WebElement send;
 
-	@FindBy(xpath = "//div[contains(text(), 'SMS Sent')]")
+	@FindBy(xpath = "//div[contains(@class, 'alert-success')]")
 	private WebElement SMSSent;
 
 	@FindBy(xpath = "//div[contains(text(), 'SMS Failed')]")

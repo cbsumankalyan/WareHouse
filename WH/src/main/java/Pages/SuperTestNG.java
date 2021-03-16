@@ -30,6 +30,7 @@ public class SuperTestNG {
 	public static ExtentTest test;
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentTest WarehouseOrders;
+	public static ExtentTest KycPortal;
 	public static ExtentTest Uppdistributor;
 	public static ExtentTest UppPayment;
 	public static ExtentTest SMSTemplate;
@@ -41,6 +42,7 @@ public class SuperTestNG {
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		WarehouseOrders = extent.createTest("<b><font color=DE6449>"+"WareHouse" + "</font></b>");
+		KycPortal = extent.createTest("<b><font color=DE6449>"+"KYC Portal" + "</font></b>");
 		Uppdistributor = extent.createTest("<b><font color=DE6449>"+"UPP Distributors" + "</font></b>");
 		UppPayment = extent.createTest("<b><font color=DE6449>"+"UPP Payments" + "</font></b>");
 		SMSTemplate = extent.createTest("<b><font color=DE6449>"+"SMS Template" + "</font></b>");
@@ -82,7 +84,7 @@ public class SuperTestNG {
 			test.log(Status.SKIP, "Test Skipped");
 		}
 		
-//		driver.quit();
+		driver.quit();
 		extent.flush();
 	}
 }

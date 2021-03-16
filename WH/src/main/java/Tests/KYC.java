@@ -15,7 +15,7 @@ public class KYC extends SuperTestNG {
 	@Test
 	public void KYCPortal () {
 		
-		test=WarehouseOrders.createNode("<b><font color=407899>"+"KYC Portal" + "</font></b>");
+		test=KycPortal.createNode("<b><font color=407899>"+"KYC Portal" + "</font></b>");
 		LP.login();
 		kyc.KYC();
 		kycsendsms.sendsms();
