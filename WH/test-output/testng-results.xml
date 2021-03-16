@@ -1,28 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="11" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-16T06:01:41Z" name="Suite" finished-at="2021-03-16T06:07:15Z" duration-ms="333451">
+  <suite started-at="2021-03-16T08:31:30Z" name="Default suite" finished-at="2021-03-16T08:32:04Z" duration-ms="34712">
     <groups>
     </groups>
-    <test started-at="2021-03-16T06:01:41Z" name="Test" finished-at="2021-03-16T06:07:15Z" duration-ms="333451">
-      <class name="Tests.UPPDistributors">
-        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.UPPDistributors@792b749c]" started-at="2021-03-16T06:03:48Z" name="PreConditon" finished-at="2021-03-16T06:04:01Z" duration-ms="12721" status="PASS">
+    <test started-at="2021-03-16T08:31:30Z" name="Default test" finished-at="2021-03-16T08:32:04Z" duration-ms="34712">
+      <class name="Tests.KYC">
+        <test-method is-config="true" signature="StartReport()[pri:0, instance:Tests.KYC@7c137fd5]" started-at="2021-03-16T08:31:30Z" name="StartReport" finished-at="2021-03-16T08:31:30Z" duration-ms="333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartReport -->
+        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.KYC@7c137fd5]" started-at="2021-03-16T08:31:30Z" name="PreConditon" finished-at="2021-03-16T08:31:43Z" duration-ms="13393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreConditon -->
-        <test-method signature="UPPDistributor()[pri:0, instance:Tests.UPPDistributors@792b749c]" started-at="2021-03-16T06:04:01Z" name="UPPDistributor" finished-at="2021-03-16T06:04:12Z" duration-ms="11051" status="FAIL">
-          <exception class="junit.framework.ComparisonFailure">
+        <test-method signature="KYCPortal()[pri:0, instance:Tests.KYC@7c137fd5]" started-at="2021-03-16T08:31:43Z" name="KYCPortal" finished-at="2021-03-16T08:32:04Z" duration-ms="20228" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected:<...> but was:<Super ...>]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href, '/kycpage')]"}
+  (Session info: chrome=89.0.4389.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'UNI-BGL-SUMAN', ip: '10.133.199.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52546}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f881634f7c556bdabfd9f520bb23455c
+*** Element info: {Using=xpath, value=//a[contains(@href, '/kycpage')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[junit.framework.ComparisonFailure: expected:<...> but was:<Super ...>
-at junit.framework.Assert.assertEquals(Assert.java:81)
-at junit.framework.Assert.assertEquals(Assert.java:87)
-at POM.UPPDistributorsPOM.Distributors(UPPDistributorsPOM.java:150)
-at Pages.UPPDistributorsPage.Distributors(UPPDistributorsPage.java:10)
-at Tests.UPPDistributors.UPPDistributor(UPPDistributors.java:23)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href, '/kycpage')]"}
+  (Session info: chrome=89.0.4389.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'UNI-BGL-SUMAN', ip: '10.133.199.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52546}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f881634f7c556bdabfd9f520bb23455c
+*** Element info: {Using=xpath, value=//a[contains(@href, '/kycpage')]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy14.click(Unknown Source)
+at POM.KycPOM.Kyc(KycPOM.java:161)
+at Pages.KycPage.KYC(KycPage.java:8)
+at Tests.KYC.KYCPortal(KYC.java:17)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -50,165 +86,22 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- junit.framework.ComparisonFailure -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UPPDistributor -->
-        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPDistributors@792b749c]" started-at="2021-03-16T06:04:12Z" name="PostCondition" finished-at="2021-03-16T06:04:13Z" duration-ms="403" status="PASS">
+        </test-method> <!-- KYCPortal -->
+        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.KYC@7c137fd5]" started-at="2021-03-16T08:32:04Z" name="PostCondition" finished-at="2021-03-16T08:32:04Z" duration-ms="738" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=UPPDistributor status=FAILURE method=UPPDistributors.UPPDistributor()[pri:0, instance:Tests.UPPDistributors@792b749c] output={null}]]]>
+                <![CDATA[[TestResult name=KYCPortal status=FAILURE method=KYC.KYCPortal()[pri:0, instance:Tests.KYC@7c137fd5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostCondition -->
-      </class> <!-- Tests.UPPDistributors -->
-      <class name="Tests.SMSTemplates">
-        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.SMSTemplates@6d60fe40]" started-at="2021-03-16T06:03:27Z" name="PreConditon" finished-at="2021-03-16T06:03:39Z" duration-ms="11713" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PreConditon -->
-        <test-method signature="Template()[pri:0, instance:Tests.SMSTemplates@6d60fe40]" started-at="2021-03-16T06:03:39Z" name="Template" finished-at="2021-03-16T06:03:48Z" duration-ms="9765" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Template -->
-        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.SMSTemplates@6d60fe40]" started-at="2021-03-16T06:03:48Z" name="PostCondition" finished-at="2021-03-16T06:03:48Z" duration-ms="105" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Template status=SUCCESS method=SMSTemplates.Template()[pri:0, instance:Tests.SMSTemplates@6d60fe40] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PostCondition -->
-      </class> <!-- Tests.SMSTemplates -->
-      <class name="Tests.Orders">
-        <test-method is-config="true" signature="StartReport()[pri:0, instance:Tests.Orders@43df23d3]" started-at="2021-03-16T06:01:41Z" name="StartReport" finished-at="2021-03-16T06:01:42Z" duration-ms="242" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StartReport -->
-        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.Orders@43df23d3]" started-at="2021-03-16T06:01:42Z" name="PreConditon" finished-at="2021-03-16T06:01:53Z" duration-ms="11889" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PreConditon -->
-        <test-method signature="CreateOrder()[pri:0, instance:Tests.Orders@43df23d3]" started-at="2021-03-16T06:01:53Z" name="CreateOrder" finished-at="2021-03-16T06:02:38Z" duration-ms="44961" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateOrder -->
-        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.Orders@43df23d3]" started-at="2021-03-16T06:02:38Z" name="PostCondition" finished-at="2021-03-16T06:02:39Z" duration-ms="586" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateOrder status=SUCCESS method=Orders.CreateOrder()[pri:0, instance:Tests.Orders@43df23d3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PostCondition -->
-        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.Orders@43df23d3]" started-at="2021-03-16T06:02:39Z" name="PreConditon" finished-at="2021-03-16T06:02:49Z" duration-ms="10386" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PreConditon -->
-        <test-method signature="WareHouseOrders()[pri:0, instance:Tests.Orders@43df23d3]" started-at="2021-03-16T06:02:49Z" name="WareHouseOrders" finished-at="2021-03-16T06:03:27Z" duration-ms="37255" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WareHouseOrders -->
-        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.Orders@43df23d3]" started-at="2021-03-16T06:03:27Z" name="PostCondition" finished-at="2021-03-16T06:03:27Z" duration-ms="251" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=WareHouseOrders status=SUCCESS method=Orders.WareHouseOrders()[pri:0, instance:Tests.Orders@43df23d3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PostCondition -->
-      </class> <!-- Tests.Orders -->
-      <class name="Tests.UPPPayments">
-        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:04:13Z" name="PreConditon" finished-at="2021-03-16T06:04:23Z" duration-ms="10343" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PreConditon -->
-        <test-method signature="KotakAvenueAborted()[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:04:23Z" name="KotakAvenueAborted" finished-at="2021-03-16T06:04:49Z" duration-ms="26218" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- KotakAvenueAborted -->
-        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:04:49Z" name="PostCondition" finished-at="2021-03-16T06:04:49Z" duration-ms="124" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=KotakAvenueAborted status=SUCCESS method=UPPPayments.KotakAvenueAborted()[pri:0, instance:Tests.UPPPayments@23e84203] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PostCondition -->
-        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:04:49Z" name="PreConditon" finished-at="2021-03-16T06:05:00Z" duration-ms="10718" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PreConditon -->
-        <test-method signature="KotakAvenueFailure()[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:05:00Z" name="KotakAvenueFailure" finished-at="2021-03-16T06:05:42Z" duration-ms="42365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- KotakAvenueFailure -->
-        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:05:42Z" name="PostCondition" finished-at="2021-03-16T06:05:43Z" duration-ms="193" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=KotakAvenueFailure status=SUCCESS method=UPPPayments.KotakAvenueFailure()[pri:0, instance:Tests.UPPPayments@23e84203] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PostCondition -->
-        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:05:43Z" name="PreConditon" finished-at="2021-03-16T06:05:57Z" duration-ms="14112" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PreConditon -->
-        <test-method signature="KotakAvenueSucess()[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:05:57Z" name="KotakAvenueSucess" finished-at="2021-03-16T06:06:36Z" duration-ms="39503" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- KotakAvenueSucess -->
-        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:06:36Z" name="PostCondition" finished-at="2021-03-16T06:06:36Z" duration-ms="128" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=KotakAvenueSucess status=SUCCESS method=UPPPayments.KotakAvenueSucess()[pri:0, instance:Tests.UPPPayments@23e84203] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PostCondition -->
-        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:06:36Z" name="PreConditon" finished-at="2021-03-16T06:06:47Z" duration-ms="10723" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PreConditon -->
-        <test-method signature="RazorPay()[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:06:47Z" name="RazorPay" finished-at="2021-03-16T06:07:15Z" duration-ms="27466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RazorPay -->
-        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPPayments@23e84203]" started-at="2021-03-16T06:07:15Z" name="PostCondition" finished-at="2021-03-16T06:07:15Z" duration-ms="163" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=RazorPay status=SUCCESS method=UPPPayments.RazorPay()[pri:0, instance:Tests.UPPPayments@23e84203] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PostCondition -->
-      </class> <!-- Tests.UPPPayments -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- Tests.KYC -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
