@@ -1,48 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results skipped="0" failed="4" ignored="16" total="25" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-16T08:31:30Z" name="Default suite" finished-at="2021-03-16T08:32:04Z" duration-ms="34712">
+  <suite name="Default suite" duration-ms="351498" started-at="2021-03-16T12:10:55Z" finished-at="2021-03-16T12:16:47Z">
     <groups>
     </groups>
-    <test started-at="2021-03-16T08:31:30Z" name="Default test" finished-at="2021-03-16T08:32:04Z" duration-ms="34712">
-      <class name="Tests.KYC">
-        <test-method is-config="true" signature="StartReport()[pri:0, instance:Tests.KYC@7c137fd5]" started-at="2021-03-16T08:31:30Z" name="StartReport" finished-at="2021-03-16T08:31:30Z" duration-ms="333" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- StartReport -->
-        <test-method is-config="true" signature="PreConditon()[pri:0, instance:Tests.KYC@7c137fd5]" started-at="2021-03-16T08:31:30Z" name="PreConditon" finished-at="2021-03-16T08:31:43Z" duration-ms="13393" status="PASS">
+    <test name="Default test" duration-ms="351498" started-at="2021-03-16T12:10:55Z" finished-at="2021-03-16T12:16:47Z">
+      <class name="Tests.UPPDistributors">
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.UPPDistributors@185d8b6]" name="PreConditon" is-config="true" duration-ms="8727" started-at="2021-03-16T12:13:53Z" finished-at="2021-03-16T12:14:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreConditon -->
-        <test-method signature="KYCPortal()[pri:0, instance:Tests.KYC@7c137fd5]" started-at="2021-03-16T08:31:43Z" name="KYCPortal" finished-at="2021-03-16T08:32:04Z" duration-ms="20228" status="FAIL">
+        <test-method status="PASS" signature="UPPDistributor()[pri:0, instance:Tests.UPPDistributors@185d8b6]" name="UPPDistributor" duration-ms="20968" started-at="2021-03-16T12:14:02Z" finished-at="2021-03-16T12:14:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UPPDistributor -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPDistributors@185d8b6]" name="PostCondition" is-config="true" duration-ms="715" started-at="2021-03-16T12:14:23Z" finished-at="2021-03-16T12:14:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UPPDistributor status=SUCCESS method=UPPDistributors.UPPDistributor()[pri:0, instance:Tests.UPPDistributors@185d8b6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostCondition -->
+      </class> <!-- Tests.UPPDistributors -->
+      <class name="Tests.SMSTemplates">
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.SMSTemplates@335eadca]" name="PreConditon" is-config="true" duration-ms="9022" started-at="2021-03-16T12:16:23Z" finished-at="2021-03-16T12:16:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreConditon -->
+        <test-method status="PASS" signature="Template()[pri:0, instance:Tests.SMSTemplates@335eadca]" name="Template" duration-ms="14349" started-at="2021-03-16T12:16:32Z" finished-at="2021-03-16T12:16:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Template -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.SMSTemplates@335eadca]" name="PostCondition" is-config="true" duration-ms="690" started-at="2021-03-16T12:16:46Z" finished-at="2021-03-16T12:16:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Template status=SUCCESS method=SMSTemplates.Template()[pri:0, instance:Tests.SMSTemplates@335eadca] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostCondition -->
+      </class> <!-- Tests.SMSTemplates -->
+      <class name="Tests.KYC">
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.KYC@6f1fba17]" name="PreConditon" is-config="true" duration-ms="10612" started-at="2021-03-16T12:13:01Z" finished-at="2021-03-16T12:13:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreConditon -->
+        <test-method status="PASS" signature="KYCPortal()[pri:0, instance:Tests.KYC@6f1fba17]" name="KYCPortal" duration-ms="40330" started-at="2021-03-16T12:13:12Z" finished-at="2021-03-16T12:13:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KYCPortal -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.KYC@6f1fba17]" name="PostCondition" is-config="true" duration-ms="731" started-at="2021-03-16T12:13:52Z" finished-at="2021-03-16T12:13:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=KYCPortal status=SUCCESS method=KYC.KYCPortal()[pri:0, instance:Tests.KYC@6f1fba17] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostCondition -->
+      </class> <!-- Tests.KYC -->
+      <class name="Tests.Orders">
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.Orders@67784306]" name="PreConditon" is-config="true" duration-ms="10629" started-at="2021-03-16T12:14:23Z" finished-at="2021-03-16T12:14:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreConditon -->
+        <test-method status="PASS" signature="CreateOrder()[pri:0, instance:Tests.Orders@67784306]" name="CreateOrder" duration-ms="59225" started-at="2021-03-16T12:14:34Z" finished-at="2021-03-16T12:15:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateOrder -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.Orders@67784306]" name="PostCondition" is-config="true" duration-ms="725" started-at="2021-03-16T12:15:33Z" finished-at="2021-03-16T12:15:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateOrder status=SUCCESS method=Orders.CreateOrder()[pri:0, instance:Tests.Orders@67784306] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostCondition -->
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.Orders@67784306]" name="PreConditon" is-config="true" duration-ms="10638" started-at="2021-03-16T12:15:34Z" finished-at="2021-03-16T12:15:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreConditon -->
+        <test-method status="PASS" signature="WareHouseOrders()[pri:0, instance:Tests.Orders@67784306]" name="WareHouseOrders" duration-ms="37244" started-at="2021-03-16T12:15:45Z" finished-at="2021-03-16T12:16:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WareHouseOrders -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.Orders@67784306]" name="PostCondition" is-config="true" duration-ms="689" started-at="2021-03-16T12:16:22Z" finished-at="2021-03-16T12:16:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=WareHouseOrders status=SUCCESS method=Orders.WareHouseOrders()[pri:0, instance:Tests.Orders@67784306] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostCondition -->
+      </class> <!-- Tests.Orders -->
+      <class name="Tests.UPPPayments">
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="PreConditon" is-config="true" duration-ms="9424" started-at="2021-03-16T12:10:55Z" finished-at="2021-03-16T12:11:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreConditon -->
+        <test-method status="FAIL" signature="KotakAvenueAborted()[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="KotakAvenueAborted" duration-ms="28746" started-at="2021-03-16T12:11:05Z" finished-at="2021-03-16T12:11:34Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href, '/kycpage')]"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//option[@value='AvenuesTest']"}
   (Session info: chrome=89.0.4389.82)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
-System info: host: 'UNI-BGL-SUMAN', ip: '10.133.199.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_241'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52546}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f881634f7c556bdabfd9f520bb23455c
-*** Element info: {Using=xpath, value=//a[contains(@href, '/kycpage')]}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61457}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 91ddeb96101b962895f2f01f7bad2567
+*** Element info: {Using=xpath, value=//option[@value='AvenuesTest']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href, '/kycpage')]"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//option[@value='AvenuesTest']"}
   (Session info: chrome=89.0.4389.82)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
-System info: host: 'UNI-BGL-SUMAN', ip: '10.133.199.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_241'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52546}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f881634f7c556bdabfd9f520bb23455c
-*** Element info: {Using=xpath, value=//a[contains(@href, '/kycpage')]}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61457}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 91ddeb96101b962895f2f01f7bad2567
+*** Element info: {Using=xpath, value=//option[@value='AvenuesTest']}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -55,14 +153,14 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy14.click(Unknown Source)
-at POM.KycPOM.Kyc(KycPOM.java:161)
-at Pages.KycPage.KYC(KycPage.java:8)
-at Tests.KYC.KYCPortal(KYC.java:17)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at com.sun.proxy.$Proxy10.click(Unknown Source)
+at POM.UPPPaymentsPOM.KotakAborted(UPPPaymentsPOM.java:164)
+at Pages.UPPPaymentPage.KotakAvenuePaymentAborted(UPPPaymentPage.java:10)
+at Tests.UPPPayments.KotakAvenueAborted(UPPPayments.java:22)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
@@ -81,27 +179,259 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- KYCPortal -->
-        <test-method is-config="true" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.KYC@7c137fd5]" started-at="2021-03-16T08:32:04Z" name="PostCondition" finished-at="2021-03-16T08:32:04Z" duration-ms="738" status="PASS">
+        </test-method> <!-- KotakAvenueAborted -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="PostCondition" is-config="true" duration-ms="1431" started-at="2021-03-16T12:11:34Z" finished-at="2021-03-16T12:11:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=KYCPortal status=FAILURE method=KYC.KYCPortal()[pri:0, instance:Tests.KYC@7c137fd5] output={null}]]]>
+                <![CDATA[[TestResult name=KotakAvenueAborted status=FAILURE method=UPPPayments.KotakAvenueAborted()[pri:0, instance:Tests.UPPPayments@6c3708b3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostCondition -->
-      </class> <!-- Tests.KYC -->
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="PreConditon" is-config="true" duration-ms="10546" started-at="2021-03-16T12:11:35Z" finished-at="2021-03-16T12:11:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreConditon -->
+        <test-method status="FAIL" signature="KotakAvenueFailure()[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="KotakAvenueFailure" duration-ms="28547" started-at="2021-03-16T12:11:46Z" finished-at="2021-03-16T12:12:14Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//option[@value='AvenuesTest']"}
+  (Session info: chrome=89.0.4389.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61497}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f08ac9d5b32d4892936b558c90fd3a0d
+*** Element info: {Using=xpath, value=//option[@value='AvenuesTest']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//option[@value='AvenuesTest']"}
+  (Session info: chrome=89.0.4389.82)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61497}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f08ac9d5b32d4892936b558c90fd3a0d
+*** Element info: {Using=xpath, value=//option[@value='AvenuesTest']}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy10.click(Unknown Source)
+at POM.UPPPaymentsPOM.KotakCanelled(UPPPaymentsPOM.java:217)
+at Pages.UPPPaymentPage.KotakAvenuePaymentCancelled(UPPPaymentPage.java:16)
+at Tests.UPPPayments.KotakAvenueFailure(UPPPayments.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KotakAvenueFailure -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="PostCondition" is-config="true" duration-ms="1113" started-at="2021-03-16T12:12:14Z" finished-at="2021-03-16T12:12:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=KotakAvenueFailure status=FAILURE method=UPPPayments.KotakAvenueFailure()[pri:0, instance:Tests.UPPPayments@6c3708b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostCondition -->
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="PreConditon" is-config="true" duration-ms="9295" started-at="2021-03-16T12:12:15Z" finished-at="2021-03-16T12:12:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreConditon -->
+        <test-method status="FAIL" signature="KotakAvenueSucess()[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="KotakAvenueSucess" duration-ms="17406" started-at="2021-03-16T12:12:25Z" finished-at="2021-03-16T12:12:42Z">
+          <exception class="junit.framework.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<...Invalid. Please enter Active valid Distributor ID> but was:<...not matching with entered UPP No/UPP Name. Please enter correct Upp No/UPP Name>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.ComparisonFailure: expected:<...Invalid. Please enter Active valid Distributor ID> but was:<...not matching with entered UPP No/UPP Name. Please enter correct Upp No/UPP Name>
+at junit.framework.Assert.assertEquals(Assert.java:81)
+at junit.framework.Assert.assertEquals(Assert.java:87)
+at POM.UPPPaymentsPOM.KotakSuccess(UPPPaymentsPOM.java:294)
+at Pages.UPPPaymentPage.KotakAvenuePaymentSuccess(UPPPaymentPage.java:22)
+at Tests.UPPPayments.KotakAvenueSucess(UPPPayments.java:38)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KotakAvenueSucess -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="PostCondition" is-config="true" duration-ms="983" started-at="2021-03-16T12:12:42Z" finished-at="2021-03-16T12:12:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=KotakAvenueSucess status=FAILURE method=UPPPayments.KotakAvenueSucess()[pri:0, instance:Tests.UPPPayments@6c3708b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostCondition -->
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="PreConditon" is-config="true" duration-ms="8650" started-at="2021-03-16T12:12:43Z" finished-at="2021-03-16T12:12:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreConditon -->
+        <test-method status="FAIL" signature="RazorPay()[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="RazorPay" duration-ms="8718" started-at="2021-03-16T12:12:52Z" finished-at="2021-03-16T12:13:00Z">
+          <exception class="org.openqa.selenium.NoSuchFrameException">
+            <message>
+              <![CDATA[no such frame
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61614}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c5979959ee245a2708bdc1721cd3de8e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchFrameException: no such frame
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61614}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c5979959ee245a2708bdc1721cd3de8e
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:927)
+at POM.UPPPaymentsPOM.RazorPay(UPPPaymentsPOM.java:392)
+at Pages.UPPPaymentPage.RazorPay(UPPPaymentPage.java:28)
+at Tests.UPPPayments.RazorPay(UPPPayments.java:47)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchFrameException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RazorPay -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPPayments@6c3708b3]" name="PostCondition" is-config="true" duration-ms="1039" started-at="2021-03-16T12:13:00Z" finished-at="2021-03-16T12:13:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RazorPay status=FAILURE method=UPPPayments.RazorPay()[pri:0, instance:Tests.UPPPayments@6c3708b3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PostCondition -->
+      </class> <!-- Tests.UPPPayments -->
+      <class name="Pages.UPPDistributorsPage">
+        <test-method status="PASS" signature="StartReport()[pri:0, instance:Pages.UPPDistributorsPage@3e9b1010]" name="StartReport" is-config="true" duration-ms="256" started-at="2021-03-16T12:10:55Z" finished-at="2021-03-16T12:10:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartReport -->
+      </class> <!-- Pages.UPPDistributorsPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
