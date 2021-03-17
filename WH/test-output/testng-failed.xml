@@ -3,17 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.UPPPayments">
+      <class name="Tests.UPPDistributors">
         <methods>
-          <include name="KotakAvenueSucess"/>
           <include name="PostCondition"/>
           <include name="StartReport"/>
-          <include name="KotakAvenueFailure"/>
-          <include name="RazorPay"/>
+          <include name="UPPDistributor"/>
           <include name="PreConditon"/>
-          <include name="KotakAvenueAborted"/>
         </methods>
-      </class> <!-- Tests.UPPPayments -->
+      </class> <!-- Tests.UPPDistributors -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

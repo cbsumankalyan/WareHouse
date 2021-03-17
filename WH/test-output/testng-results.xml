@@ -1,36 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="55682" started-at="2021-03-17T07:57:35Z" finished-at="2021-03-17T07:58:31Z">
+  <suite name="Default suite" duration-ms="34013" started-at="2021-03-17T10:41:14Z" finished-at="2021-03-17T10:41:48Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="55682" started-at="2021-03-17T07:57:35Z" finished-at="2021-03-17T07:58:31Z">
-      <class name="Tests.KYC">
-        <test-method status="PASS" signature="StartReport()[pri:0, instance:Tests.KYC@52a86356]" name="StartReport" is-config="true" duration-ms="293" started-at="2021-03-17T07:57:35Z" finished-at="2021-03-17T07:57:36Z">
+    <test name="Default test" duration-ms="34013" started-at="2021-03-17T10:41:14Z" finished-at="2021-03-17T10:41:48Z">
+      <class name="Tests.UPPDistributors">
+        <test-method status="PASS" signature="StartReport()[pri:0, instance:Tests.UPPDistributors@617faa95]" name="StartReport" is-config="true" duration-ms="266" started-at="2021-03-17T10:41:14Z" finished-at="2021-03-17T10:41:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartReport -->
-        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.KYC@52a86356]" name="PreConditon" is-config="true" duration-ms="11869" started-at="2021-03-17T07:57:36Z" finished-at="2021-03-17T07:57:48Z">
+        <test-method status="PASS" signature="PreConditon()[pri:0, instance:Tests.UPPDistributors@617faa95]" name="PreConditon" is-config="true" duration-ms="11639" started-at="2021-03-17T10:41:14Z" finished-at="2021-03-17T10:41:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PreConditon -->
-        <test-method status="PASS" signature="KYCPortal()[pri:0, instance:Tests.KYC@52a86356]" name="KYCPortal" duration-ms="42306" started-at="2021-03-17T07:57:48Z" finished-at="2021-03-17T07:58:30Z">
+        <test-method status="FAIL" signature="UPPDistributor()[pri:0, instance:Tests.UPPDistributors@617faa95]" name="UPPDistributor" duration-ms="20771" started-at="2021-03-17T10:41:26Z" finished-at="2021-03-17T10:41:47Z">
+          <exception class="junit.framework.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<×...> but was:<�...>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.ComparisonFailure: expected:<×...> but was:<�...>
+at junit.framework.Assert.assertEquals(Assert.java:81)
+at junit.framework.Assert.assertEquals(Assert.java:87)
+at POM.UPPDistributorsPOM.Distributors(UPPDistributorsPOM.java:164)
+at Pages.UPPDistributorsPage.Distributors(UPPDistributorsPage.java:10)
+at Tests.UPPDistributors.UPPDistributor(UPPDistributors.java:23)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.ComparisonFailure -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- KYCPortal -->
-        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.KYC@52a86356]" name="PostCondition" is-config="true" duration-ms="1178" started-at="2021-03-17T07:58:30Z" finished-at="2021-03-17T07:58:31Z">
+        </test-method> <!-- UPPDistributor -->
+        <test-method status="PASS" signature="PostCondition(org.testng.ITestResult)[pri:0, instance:Tests.UPPDistributors@617faa95]" name="PostCondition" is-config="true" duration-ms="1316" started-at="2021-03-17T10:41:47Z" finished-at="2021-03-17T10:41:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=KYCPortal status=SUCCESS method=KYC.KYCPortal()[pri:0, instance:Tests.KYC@52a86356] output={null}]]]>
+                <![CDATA[[TestResult name=UPPDistributor status=FAILURE method=UPPDistributors.UPPDistributor()[pri:0, instance:Tests.UPPDistributors@617faa95] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostCondition -->
-      </class> <!-- Tests.KYC -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- Tests.UPPDistributors -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
