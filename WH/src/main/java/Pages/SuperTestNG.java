@@ -37,7 +37,7 @@ public class SuperTestNG {
 	
 	@BeforeTest
 	public void StartReport() {
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/Reports/Extent.html");
+		htmlReporter = new ExtentHtmlReporter("C://xampp//htdocs//WHReport//WareHouse.html");
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir") +"/Config.xml");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);

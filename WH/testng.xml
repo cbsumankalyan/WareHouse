@@ -3,9 +3,11 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-     
+      <class name="Tests.UPPDistributors"/>
       <class name="Tests.KYC"/>
-
+      <class name="Tests.SMSTemplates"/>
+      <class name="Tests.Orders"/>
+      <class name="Tests.UPPPayments"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
