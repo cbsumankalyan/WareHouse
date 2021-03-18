@@ -160,7 +160,6 @@ public class UPPDistributorsPOM extends SuperTestNG {
 		DistributorPhone.sendKeys("9019185441");
 		Save.click();
 		Assert.assertTrue(UPPDistributorCreatedSuccessfully.isDisplayed());
-		Assert.assertEquals(UPPDistributorCreatedSuccessfully.getText(), "�\nUPP Distributor updated successfully");
 		Assert.assertEquals(TableData.getText(), "1 108639102 Test UPP-818 "+Adate.format(now)+" India Testing Bengaluru Karnataka Active 9019185441 View Update Delete");
 		test.log(Status.INFO, "Updated UPP Distributor Record is in the Table's 1st Place ");
 	}

@@ -80,6 +80,9 @@ public class UPPPaymentsPOM extends SuperTestNG {
 
 	@FindBy(xpath = "//div[@class='input-group']/a")
 	private WebElement BackToUPPPayment;
+	
+	@FindBy(xpath = "//input[@value='ccavenue']")
+	private WebElement KotakCCAvenuePayment;
 
 	@FindBy(xpath = "//input[@value='razorpay']")
 	private WebElement RazorPayment;
@@ -126,6 +129,9 @@ public class UPPPaymentsPOM extends SuperTestNG {
 	@FindBy(xpath = "//a[contains(@class,'cancel')]")
 	private WebElement Cancel;
 	
+	@FindBy(xpath = "//a[@title = 'Cancel Transaction']")
+	private WebElement CancelTransaction;
+	
 	@FindBy(xpath = "//option[@value='N']")
 	private WebElement TransactionStatusNO;
 
@@ -150,7 +156,7 @@ public class UPPPaymentsPOM extends SuperTestNG {
 
 			if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
 				driver.switchTo().window(ChildWindow);
-				
+				KotakCCAvenuePayment.click();
 				UPPName.sendKeys("India Testing");
 				UPPNumber.sendKeys("UPP-818");
 				DistributorID.sendKeys("108639102");
@@ -164,6 +170,7 @@ public class UPPPaymentsPOM extends SuperTestNG {
 				KotakAvenuePayment.click();
 				
 				Cancel.click();
+				CancelTransaction.click();
 				Assert.assertEquals(PVInformation.getText(),
 						"Your Payment Transaction Failed. Please Retry. Use the Reference No for any queries.");
 				test.log(Status.INFO, "Your Payment Transaction was Aborted.");
@@ -203,7 +210,7 @@ public class UPPPaymentsPOM extends SuperTestNG {
 
 			if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
 				driver.switchTo().window(ChildWindow);
-				
+				KotakCCAvenuePayment.click();
 				UPPName.sendKeys("India Testing");
 				UPPNumber.sendKeys("UPP-818");
 				DistributorID.sendKeys("108639102");
@@ -282,6 +289,7 @@ public class UPPPaymentsPOM extends SuperTestNG {
 
 			if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
 				driver.switchTo().window(ChildWindow);
+				KotakCCAvenuePayment.click();
 				test.log(Status.INFO, "<b><font color=green>Checking with Different Dist ID, UPP No/UPP Name</font></b>");
 				test.log(Status.INFO, "Kotak CC Avenue");
 				UPPName.sendKeys("Testing");
