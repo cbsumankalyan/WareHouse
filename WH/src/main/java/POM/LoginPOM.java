@@ -29,6 +29,7 @@ public class LoginPOM extends SuperTestNG{
 		Password.sendKeys(password);
 		Login.click();
 		
+		test.log(Status.INFO, "<a> http://india.unicityportal.com/test_warehouseorder/auth/login</a>");
 		test.log(Status.INFO, "<b><font color=green>Login as Admin</font></b>");
 		test.log(Status.INFO, "Login:  "+"Username: " + username);
 		test.log(Status.INFO, "Password:  " + password);

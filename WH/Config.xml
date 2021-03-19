@@ -17,16 +17,10 @@
 		<documentTitle>WareHouse</documentTitle>
 
 		<!-- report name - displayed at top-nav -->
-		<reportName>Unicity WareHouse</reportName>
+		<reportName>Unicity WareHouse Application</reportName>
 
 		<!-- report headline - displayed at top-nav, after reportHeadline -->
-		<reportHeadline>Automation Report</reportHeadline>
-
-		<reportName>
-    <![CDATA[
-    <img src = 'D:/workspace/enroll.ng/src/assets/img/unicity-enroll.png'> <b><font color=red>UNICITY</font></b>
-    ]]>
-		</reportName>
+		<reportHeadline>WareHouse Automation Report</reportHeadline>
 
 		<!-- global date format override -->
 		<!-- defaults to yyyy-MM-dd -->
