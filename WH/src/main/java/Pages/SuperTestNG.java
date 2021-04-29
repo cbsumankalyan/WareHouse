@@ -2,7 +2,9 @@ package Pages;
 
 import java.io.IOException;
 import java.net.ProtocolException;
+import java.sql.Timestamp;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.concurrent.TimeUnit;
 import org.json.JSONException;
 import org.openqa.selenium.OutputType;
@@ -12,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import com.aventstack.extentreports.ExtentReports;
@@ -35,9 +38,12 @@ public class SuperTestNG {
 	public static ExtentTest UppPayment;
 	public static ExtentTest SMSTemplate;
 	
+	public static SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy-HH-mm");
+	public static Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+	
 	@BeforeTest
 	public void StartReport() {
-		htmlReporter = new ExtentHtmlReporter("C://xampp//htdocs//WHReport//WareHouse.html");
+		htmlReporter = new ExtentHtmlReporter("C://xampp//htdocs//WHReport//WareHouse"+date.format(timestamp)+".html");
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir") +"/Config.xml");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
@@ -51,7 +57,7 @@ public class SuperTestNG {
 
 	@BeforeMethod
 	public void PreConditon() throws ParseException, ProtocolException, JSONException, Exception {
-		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:/Users/sumancb/Downloads/chromedriver_win32 (14)/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("disable-extensions");
 		options.addArguments("--start-maximized");
@@ -85,6 +91,12 @@ public class SuperTestNG {
 		}
 		
 		driver.quit();
+	}
+	
+	@AfterSuite
+	public void afterSuite() throws Exception {
+		
 		extent.flush();
+		NoAttach.Sendmail();
 	}
 }
