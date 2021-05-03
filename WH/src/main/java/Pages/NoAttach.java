@@ -35,8 +35,7 @@ public class NoAttach extends SuperTestNG {
 
 		Message message = new MimeMessage(session);
 		message.setFrom(new InternetAddress("unicitytechindia@gmail.com"));
-		message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("Suman.CB@unicity.com"));
-		message.addRecipients(Message.RecipientType.CC, InternetAddress.parse("in-web-bangalore@unicity.com"));
+		message.addRecipients(Message.RecipientType.TO, InternetAddress.parse("in-web-bangalore@unicity.com"));
 
 		
 
