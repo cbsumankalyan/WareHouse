@@ -24,14 +24,14 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class SuperTestNG {
 
 	public static WebDriver driver;
 	public static ExtentReports extent;
 	public static ExtentTest test;
-	public static ExtentHtmlReporter htmlReporter;
+	public static ExtentSparkReporter htmlReporter;
 	public static ExtentTest WarehouseOrders;
 	public static ExtentTest KycPortal;
 	public static ExtentTest Uppdistributor;
@@ -42,8 +42,8 @@ public class SuperTestNG {
 	public static Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 	
 	@BeforeTest
-	public void StartReport() {
-		htmlReporter = new ExtentHtmlReporter("C://xampp//htdocs//WHReport//WareHouse"+date.format(timestamp)+".html");
+	public void StartReport() throws IOException {
+		htmlReporter = new ExtentSparkReporter("C://xampp//htdocs//WHReport//WareHouse"+date.format(timestamp)+".html");
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir") +"/Config.xml");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
