@@ -47,12 +47,11 @@ public class SuperTestNG {
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir") +"/Config.xml");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
-		WarehouseOrders = extent.createTest("<b><font color=DE6449>"+"WareHouse" + "</font></b>");
-		KycPortal = extent.createTest("<b><font color=DE6449>"+"KYC Portal" + "</font></b>");
 		Uppdistributor = extent.createTest("<b><font color=DE6449>"+"UPP Distributors" + "</font></b>");
 		UppPayment = extent.createTest("<b><font color=DE6449>"+"UPP Payments" + "</font></b>");
+		WarehouseOrders = extent.createTest("<b><font color=DE6449>"+"WareHouse" + "</font></b>");
 		SMSTemplate = extent.createTest("<b><font color=DE6449>"+"SMS Template" + "</font></b>");
-
+		KycPortal = extent.createTest("<b><font color=DE6449>"+"KYC Portal" + "</font></b>");
 	}
 
 	@BeforeMethod
