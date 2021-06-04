@@ -26,6 +26,8 @@ import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class SuperTestNG {
 
 	public static WebDriver driver;
@@ -56,7 +58,7 @@ public class SuperTestNG {
 
 	@BeforeMethod
 	public void PreConditon() throws ParseException, ProtocolException, JSONException, Exception {
-		System.setProperty("webdriver.chrome.driver", "C:/Users/sumancb/Downloads/chromedriver_win32 (14)/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("disable-extensions");
 		options.addArguments("--start-maximized");
