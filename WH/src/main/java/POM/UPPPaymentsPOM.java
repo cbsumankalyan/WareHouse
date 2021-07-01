@@ -162,7 +162,7 @@ public class UPPPaymentsPOM extends SuperTestNG {
 				DistributorID.sendKeys("108639102");
 				UPPAmount.sendKeys(String.valueOf(amount));
 				UPPPhone.sendKeys("9019185440");
-				UPPEmail.sendKeys("cbsumankalyan@gmail.com");
+				UPPEmail.sendKeys("unicitytechindia@gmail.com");
 				
 				
 				test.log(Status.INFO, "<b><font color=green>Aborted Transaction</font></b>");
@@ -216,7 +216,7 @@ public class UPPPaymentsPOM extends SuperTestNG {
 				DistributorID.sendKeys("108639102");
 				UPPAmount.sendKeys(String.valueOf(amount));
 				UPPPhone.sendKeys("9019185440");
-				UPPEmail.sendKeys("cbsumankalyan@gmail.com");
+				UPPEmail.sendKeys("unicitytechindia@gmail.com");
 				
 				test.log(Status.INFO, "<b><font color=green>Failure Transaction</font></b>");
 				
@@ -297,7 +297,7 @@ public class UPPPaymentsPOM extends SuperTestNG {
 				DistributorID.sendKeys("108639102");
 				UPPAmount.sendKeys("1");
 				UPPPhone.sendKeys("9019185440");
-				UPPEmail.sendKeys("cbsumankalyan@gmail.com");
+				UPPEmail.sendKeys("unicitytechindia@gmail.com");
 				Search.click();
 				Assert.assertEquals(Error.getText(),
 						"Entered Distributor ID is not matching with entered UPP No/UPP Name. Please enter correct Upp No/UPP Name");
@@ -391,7 +391,7 @@ public class UPPPaymentsPOM extends SuperTestNG {
 				
 				DistributorID.sendKeys("108639102");
 				UPPPhone.sendKeys("9019185440");
-				UPPEmail.sendKeys("cbsumankalyan@gmail.com");
+				UPPEmail.sendKeys("unicitytechindia@gmail.com");
 				UPPAmount.sendKeys(String.valueOf(amount));
 				UPPName.sendKeys("India Testing");
 				UPPNumber.sendKeys("UPP-818");

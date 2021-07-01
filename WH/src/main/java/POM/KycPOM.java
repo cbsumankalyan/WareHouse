@@ -169,11 +169,11 @@ public class KycPOM extends SuperTestNG {
 
 		KycPageUpload.click();
 		DistID.sendKeys("108639101");
-		DistEmail.sendKeys("cbsumankalyan@gmail.com");
+		DistEmail.sendKeys("unicitytechindia@gmail.com");
 		KycDistID.sendKeys("108639101");
 		KycRemarks.sendKeys("Uploading KYC Documents Remarks");
 		test.log(Status.INFO, "UploadKyc"+"108639101");
-		test.log(Status.INFO, "cbsumankalyan@gmail.com");
+		test.log(Status.INFO, "unicitytechindia@gmail.com.com");
 		test.log(Status.INFO, "Uploader Dist ID: 108639101");
 		test.log(Status.INFO, "Uploading KYC Documents Remarks");
 	}
@@ -229,7 +229,7 @@ public class KycPOM extends SuperTestNG {
 		Assert.assertEquals(Modify.getAttribute("placeholder"), "Super Admin");
 		Assert.assertEquals(ModifyName.getAttribute("placeholder"), "India Training");
 		Assert.assertEquals(ModifyID.getAttribute("placeholder"), "108639101");
-		Assert.assertEquals(ModifyEmail.getAttribute("placeholder"), "cbsumankalyan@gmail.com");
+		Assert.assertEquals(ModifyEmail.getAttribute("placeholder"), "unicitytechindia@gmail.com");
 	}
 
 	public void KycValidate() {
@@ -251,7 +251,7 @@ public class KycPOM extends SuperTestNG {
 		Assert.assertEquals(KycDistributorName.getAttribute("value"), "India Training");
 		Assert.assertEquals(KycUploaderName.getAttribute("value"), "India Training");
 		Assert.assertEquals(KycUploaderId.getAttribute("value"), "108639101");
-		Assert.assertEquals(KycUploaderEmail.getAttribute("value"), "cbsumankalyan@gmail.com");
+		Assert.assertEquals(KycUploaderEmail.getAttribute("value"), "unicitytechindia@gmail.com");
 
 		String status [] = {"Completed", "Incomplete", "Validation Pending", "Rejected"};
 		String random = (status[new Random().nextInt(status.length)]);

@@ -119,7 +119,7 @@ public class UPPDistributorsPOM extends SuperTestNG {
 		DistributorPlace.sendKeys("Bengaluru");
 		DistributorState.sendKeys("Karnataka");
 		DistributorPhone.sendKeys("9019185440");
-		DistributorEmail.sendKeys("cbsumankalyan@gmail.com");
+		DistributorEmail.sendKeys("unicitytechindia@gmail.com");
 		Cancel.click();
 
 		CreateUPPDistributors.click();
@@ -133,7 +133,7 @@ public class UPPDistributorsPOM extends SuperTestNG {
 		DistributorPlace.sendKeys("Bengaluru");
 		DistributorState.sendKeys("Karnataka");
 		DistributorPhone.sendKeys("9019185440");
-		DistributorEmail.sendKeys("cbsumankalyan@gmail.com");
+		DistributorEmail.sendKeys("unicitytechindia@gmail.com");
 		Save.click();
 
 		Assert.assertTrue(UPPDistributorCreatedSuccessfully.isDisplayed());
@@ -142,7 +142,7 @@ public class UPPDistributorsPOM extends SuperTestNG {
 		test.log(Status.INFO, "Create UPP Distributor Record is in the Table's 1st Place ");
 		
 		String[] uppdistributor = { "Test", "UPP-818", Adate.format(now), "India Testing", "108639102", "Bengaluru",
-				"Karnataka", "Active", "9019185440", "cbsumankalyan@gmail.com", "Super Admin", "", ""};
+				"Karnataka", "Active", "9019185440", "unicitytechindia@gmail.com", "Super Admin", "", ""};
 
 		View.click();
 		for (int i = 0; i < uppdistributor.length; i++) {
@@ -151,7 +151,7 @@ public class UPPDistributorsPOM extends SuperTestNG {
 		Back.click();
 		
 		String[] updatedistributor = { "Test", "UPP-818", date.format(now), "India Testing", "108639102", "Bengaluru",
-				"Karnataka", "9019185440", "cbsumankalyan@gmail.com"};
+				"Karnataka", "9019185440", "unicitytechindia@gmail.com"};
 		Update.click();
 		for (int i = 0; i < updatedistributor.length; i++) {
 			Assert.assertEquals(updatedistributor[i], UpdateData.get(i).getAttribute("value"));
